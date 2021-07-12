@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ProductCard from './components/ProductCard/ProductCard.js'
+import shirtOne from './assets/shirt-1.jpg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        return(
+            <div className="App">
+                <ProductCard itemName={"Ultrafine Merino T-shirt"} price={"$80.00"} currentRating={4} itemImage={shirtOne}/>
+            </div>
+        )
+    }
 }
 
-export default App;
+
